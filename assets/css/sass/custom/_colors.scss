@@ -11,11 +11,13 @@ $blue: #311b92;
 
 
 .bg-primary {
-    background-color: $primary;
+    background-color: $primary !important;
 
     &-hov {
+        background-color: $primary !important;
+
         &:hover {
-            background-color: darken($primary, 10%);
+            background-color: darken($primary, 10%) !important;
         }
     }
 

@@ -151,11 +151,14 @@
                 .timeline-dot {
                     display: none;
 
+
                     @media #{$large-and-up} {
                         display: block;
                         @include shadow;
 
                         h4 {
+                            font-size: 1.7rem;
+                            padding: .25rem;
                             color: $white;
                             margin: 0;
                             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
@@ -165,7 +168,7 @@
                         top: 0;
                         z-index: 5;
                         background-color: $primary;
-                        padding-top: .36rem;
+                        padding-top: .3rem;
                         text-align: center;
                         width: 3rem;
                         height: 3rem;
