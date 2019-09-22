@@ -1,0 +1,28 @@
+#ham {
+    position: fixed;
+    left: 1em;
+    top: 1em;
+    background-color: rgba(0, 0, 0, 0.24);
+    border: thin solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    z-index: 98;
+}
+
+.sidenav li>a>i {
+    margin: 0;
+    font-weight: bold;
+}
+
+.sidenav li>a {
+    font-weight: bold !important;
+}
+
+#parallax-header {
+    max-height: 350px;
+}
+
+.parallax {
+    img {
+        filter: blur(3px);
+    }
+}

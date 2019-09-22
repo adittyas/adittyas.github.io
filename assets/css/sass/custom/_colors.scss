@@ -1,0 +1,22 @@
+// primary color
+
+$white : #ffffff;
+$white2 : #fefefe;
+$dark : #191919;
+$dark2 : #4c4c4c;
+
+$primary: #7cb342;
+$font-color: rgba(97, 97, 97);
+$blue: #311b92;
+
+
+.bg-primary {
+    background-color: $primary;
+
+    &-hov {
+        &:hover {
+            background-color: darken($primary, 10%);
+        }
+    }
+
+}

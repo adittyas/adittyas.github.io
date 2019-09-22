@@ -1,0 +1,7 @@
+.progress {
+    background-color: lighten($dark, 40%);
+
+    .determinate {
+        background-color: $white;
+    }
+}

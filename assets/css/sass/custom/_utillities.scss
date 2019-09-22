@@ -1,0 +1,163 @@
+%col-no-padding {
+
+    >.col,
+    >[class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+%transition {
+    transition: .4s;
+}
+
+.no-gutters {
+    margin: 0 !important;
+    @extend %col-no-padding;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.img-full {
+    width: 100%;
+    // display: block;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.row::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.clearfix {
+
+    &::before,
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.pos {
+    &-static {
+        position: static;
+    }
+
+    &-absolute {
+        position: absolute;
+    }
+
+    &-fixed {
+        position: fixed;
+    }
+
+    &-sticky {
+        position: sticky;
+    }
+
+    &-relative {
+        position: relative;
+    }
+}
+
+.ovr {
+    &-hidden {
+        overflow: hidden;
+    }
+
+    &-scroll {
+        overflow: scroll;
+    }
+
+    &-hidden {
+        overflow: hidden;
+    }
+
+    &-visible {
+        overflow: visible;
+    }
+}
+
+
+.container {
+    max-width: 1170px;
+
+
+    @media #{$medium-and-up} {
+        width: 90%;
+    }
+
+    @media #{$large-and-up} {
+        width: 85%;
+    }
+
+    @media #{$extra-large-and-up} {
+        width: 80%;
+    }
+
+    // .row {
+    //     @extend %col-no-padding;
+    // }
+}
+
+.txt {
+    &-upper {
+        text-transform: uppercase;
+    }
+
+    &-capi {
+        text-transform: capitalize;
+    }
+
+    &-lower {
+        text-transform: lowercase;
+    }
+
+}
+
+.section {
+    margin: {
+        top: 1em;
+        bottom: 2em;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+
+        img {
+            width: 60px;
+            padding: .5rem;
+            margin: 0 .5rem -1rem .5rem;
+        }
+    }
+}
+
+.btn {
+    margin: .5rem .5rem;
+    min-width: 12rem;
+}
+
+.bold {
+    font-weight: 900;
+}
+
+@mixin shadow {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}

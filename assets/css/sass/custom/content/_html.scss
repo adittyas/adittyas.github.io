@@ -1,0 +1,177 @@
+    html {
+        color: $font-color !important;
+        font-size: 15px !important;
+    }
+
+    body {
+        color: inherit;
+        font-size: inherit;
+        line-height: 1.5;
+        font-family: 'nunitosans-regular-webfont', Arial, Helvetica, sans-serif;
+    }
+
+    .timeline {
+        position: relative;
+
+        // &::before {
+        //     content: '';
+        //     width: 4px;
+        //     height: 100%;
+        //     background-color: lighten($primary, 30%);
+        //     position: absolute;
+        //     top: 0;
+        //     left: 50%;
+        //     bottom: 0;
+        //     transform: translateX(-50%);
+        //     z-index: 1;
+        // }
+
+        .timeline-block {
+            position: relative;
+
+            &:nth-of-type(n+2) {
+                @media #{$large-and-up} {
+                    margin-top: -7rem;
+                }
+
+            }
+
+            &:not(:last-child) {
+                &::before {
+                    content: '';
+                    width: 4px;
+                    height: calc(100% + 1rem);
+
+                    @media #{$large-and-up} {
+                        height: calc(100% - 5rem);
+                    }
+
+                    background-color: lighten($primary, 30%);
+                    position: absolute;
+                    top: 1rem;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    z-index: 1;
+                }
+            }
+
+            &::after {
+                @media #{$large-and-up} {
+                    content: '';
+                    width: 50%;
+                    height: 4px;
+                    background-color: lighten($primary, 30%);
+                    position: absolute;
+                    top: 1.4rem;
+                    z-index: 0;
+                    border-radius: 2px 0 0 2px;
+                }
+
+            }
+
+            &:nth-of-type(odd) {
+                &::after {
+                    left: 0;
+                }
+
+                .timeline-content {
+                    @media #{$large-and-up} {
+                        padding-right: 3rem;
+                    }
+
+                    border-radius: 2px 0 0 2px;
+
+                    .timeline-dot {
+                        left: 100%;
+                        transform: translateX(-50%);
+                    }
+
+                    &::before {
+                        left: 0;
+                        border-radius: 2px 0 0 2px;
+
+                    }
+                }
+
+                @media #{$large-and-up} {
+                    padding-right: 50%;
+                }
+
+            }
+
+            &:nth-of-type(even) {
+                &::after {
+                    left: 50%;
+                }
+
+                .timeline-content {
+                    @media #{$large-and-up} {
+                        padding-left: 3rem;
+                    }
+
+
+
+                    .timeline-dot {
+                        right: 100%;
+                        transform: translateX(50%);
+                    }
+
+                    &::before {
+                        right: 0;
+                        border-radius: 0 2px 2px 0;
+                    }
+                }
+
+                @media #{$large-and-up} {
+                    padding-left: 50%;
+                }
+            }
+
+
+            .timeline-content {
+
+                position: relative;
+                width: 100%;
+                z-index: 1;
+
+                &::before {
+                    content: '';
+                    width: 10px;
+                    height: 100%;
+                    background-color: lighten($blue, 30%);
+                    position: absolute;
+                    top: 0;
+
+                    z-index: 2;
+
+                }
+
+
+                .timeline-dot {
+                    display: none;
+
+                    @media #{$large-and-up} {
+                        display: block;
+                        @include shadow;
+
+                        h4 {
+                            color: $white;
+                            margin: 0;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+                        }
+
+                        position: absolute;
+                        top: 0;
+                        z-index: 5;
+                        background-color: $primary;
+                        padding-top: .36rem;
+                        text-align: center;
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
