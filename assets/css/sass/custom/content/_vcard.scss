@@ -3,16 +3,10 @@ $pad-card: 3em;
 
 .card-panel {
     padding: $pad-card;
-    // overflow: hidden;
 }
 
-.v-card {
+#v-card {
     margin-top: -215px !important;
-    // position: absolute;
-    // top: 125px;
-    // left: 0;
-    // width: 100%;
-    // overflow: hidden;
 }
 
 .info {
@@ -30,7 +24,7 @@ $pad-card: 3em;
         margin-top: 0;
     }
 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+    @include text-shadow;
 
     * {
         margin: 0;
@@ -41,7 +35,6 @@ $pad-card: 3em;
 
 .info-content {
     li {
-        // width: 50%;
         font-size: 1.2em;
 
         i {
@@ -83,23 +76,12 @@ $pad-card: 3em;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    // width: 50%;
-    // z-index: 99;
-    // background: #009688 url('../images/pp.jpg') center;
-    // background-size: cover;
-
-    // overflow: hidden;
-    // border-radius: 50%;
-    // position: relative;
-    // top: 0;
-    // left: 0;
-
     img {
         max-width: 200px;
         object-fit: cover;
         object-position: center;
-        border-radius: 50%;
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+        border-radius: 16px;
+        @include box-shadow;
 
         @media #{$large-and-up} {
             border-radius: 0;
@@ -111,16 +93,12 @@ $pad-card: 3em;
 
     @media #{$large-and-up} {
         position: relative;
-        // width: 60%;
         top: 0;
         left: 0;
         transform: none;
         margin: -$pad-card;
     }
 
-    @media #{$large-and-up} {
-        // width: 100%;
-    }
 }
 
 .slant {

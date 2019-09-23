@@ -8507,131 +8507,6 @@ body {
   font-family: "nunitosans-regular-webfont", Arial, Helvetica, sans-serif;
 }
 
-.timeline {
-  position: relative;
-}
-.timeline .timeline-block {
-  position: relative;
-}
-@media only screen and (min-width : 993px) {
-  .timeline .timeline-block:nth-of-type(n+2) {
-    margin-top: -7rem;
-  }
-}
-.timeline .timeline-block:not(:last-child)::before {
-  content: "";
-  width: 4px;
-  height: calc(100% + 1rem);
-  background-color: #c8e1ad;
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-@media only screen and (min-width : 993px) {
-  .timeline .timeline-block:not(:last-child)::before {
-    height: calc(100% - 5rem);
-  }
-}
-@media only screen and (min-width : 993px) {
-  .timeline .timeline-block::after {
-    content: "";
-    width: 50%;
-    height: 4px;
-    background-color: #c8e1ad;
-    position: absolute;
-    top: 1.4rem;
-    z-index: 0;
-    border-radius: 2px 0 0 2px;
-  }
-}
-.timeline .timeline-block:nth-of-type(odd)::after {
-  left: 0;
-}
-.timeline .timeline-block:nth-of-type(odd) .timeline-content {
-  border-radius: 2px 0 0 2px;
-}
-@media only screen and (min-width : 993px) {
-  .timeline .timeline-block:nth-of-type(odd) .timeline-content {
-    padding-right: 3rem;
-  }
-}
-.timeline .timeline-block:nth-of-type(odd) .timeline-content .timeline-dot {
-  left: 100%;
-  transform: translateX(-50%);
-}
-.timeline .timeline-block:nth-of-type(odd) .timeline-content::before {
-  left: 0;
-  border-radius: 2px 0 0 2px;
-}
-@media only screen and (min-width : 993px) {
-  .timeline .timeline-block:nth-of-type(odd) {
-    padding-right: 50%;
-  }
-}
-.timeline .timeline-block:nth-of-type(even)::after {
-  left: 50%;
-}
-@media only screen and (min-width : 993px) {
-  .timeline .timeline-block:nth-of-type(even) .timeline-content {
-    padding-left: 3rem;
-  }
-}
-.timeline .timeline-block:nth-of-type(even) .timeline-content .timeline-dot {
-  right: 100%;
-  transform: translateX(50%);
-}
-.timeline .timeline-block:nth-of-type(even) .timeline-content::before {
-  right: 0;
-  border-radius: 0 2px 2px 0;
-}
-@media only screen and (min-width : 993px) {
-  .timeline .timeline-block:nth-of-type(even) {
-    padding-left: 50%;
-  }
-}
-.timeline .timeline-block .timeline-content {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-}
-.timeline .timeline-block .timeline-content::before {
-  content: "";
-  width: 10px;
-  height: 100%;
-  background-color: #7b64e2;
-  position: absolute;
-  top: 0;
-  z-index: 2;
-}
-.timeline .timeline-block .timeline-content .timeline-dot {
-  display: none;
-}
-@media only screen and (min-width : 993px) {
-  .timeline .timeline-block .timeline-content .timeline-dot {
-    display: block;
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 0;
-    z-index: 5;
-    background-color: #7cb342;
-    padding-top: 0.3rem;
-    text-align: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-  }
-  .timeline .timeline-block .timeline-content .timeline-dot h4 {
-    font-size: 1.7rem;
-    padding: 0.25rem;
-    color: #ffffff;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
-  }
-}
-
 #ham {
   position: fixed;
   left: 1em;
@@ -8663,7 +8538,7 @@ body {
   padding: 3em;
 }
 
-.v-card {
+#v-card {
   margin-top: -215px !important;
 }
 
@@ -8733,7 +8608,7 @@ body {
   max-width: 200px;
   object-fit: cover;
   object-position: center;
-  border-radius: 50%;
+  border-radius: 16px;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
 }
 @media only screen and (min-width : 993px) {
@@ -8753,6 +8628,7 @@ body {
     margin: -3em;
   }
 }
+
 @media only screen and (min-width : 993px) {
   .slant {
     top: 0;
@@ -8799,6 +8675,189 @@ body {
 }
 .card .card-action {
   padding: 20px;
+}
+
+.timeline {
+  position: relative;
+}
+.timeline .timeline-block {
+  position: relative;
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block:nth-of-type(n+2) {
+    margin-top: -7rem;
+  }
+}
+.timeline .timeline-block:not(:last-child)::before {
+  content: "";
+  width: 4px;
+  height: calc(100% + 1rem);
+  background-color: #c8e1ad;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block:not(:last-child)::before {
+    height: calc(100% - 5rem);
+  }
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block::after {
+    content: "";
+    width: 50%;
+    height: 4px;
+    background-color: #c8e1ad;
+    position: absolute;
+    top: 1.4rem;
+    z-index: 0;
+    border-radius: 2px 0 0 2px;
+  }
+}
+.timeline .timeline-block:nth-of-type(odd)::after {
+  left: 0;
+}
+.timeline .timeline-block:nth-of-type(odd) .timeline-content {
+  border-radius: 2px 0 0 2px;
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block:nth-of-type(odd) .timeline-content {
+    padding-right: 3rem;
+  }
+}
+.timeline .timeline-block:nth-of-type(odd) .timeline-content .timeline-dot {
+  right: 0;
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block:nth-of-type(odd) .timeline-content .timeline-dot {
+    left: 100%;
+    transform: translateX(-50%);
+  }
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block:nth-of-type(odd) {
+    padding-right: 50%;
+  }
+}
+.timeline .timeline-block:nth-of-type(even)::after {
+  left: 50%;
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block:nth-of-type(even) .timeline-content {
+    padding-left: 3rem;
+  }
+}
+.timeline .timeline-block:nth-of-type(even) .timeline-content .timeline-dot {
+  right: 0;
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block:nth-of-type(even) .timeline-content .timeline-dot {
+    right: 100%;
+    transform: translateX(50%);
+  }
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block:nth-of-type(even) .timeline-content::before {
+    right: 0 !important;
+    border-radius: 0 2px 2px 0;
+  }
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block:nth-of-type(even) {
+    padding-left: 50%;
+  }
+}
+.timeline .timeline-block .timeline-content {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+  margin: 0.5rem 0 1rem 0;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block .timeline-content {
+    overflow: visible;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+.timeline .timeline-block .timeline-content::before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #7b64e2;
+  position: absolute;
+  border-radius: 2px 0 0 2px;
+  top: 0;
+  z-index: 2;
+}
+.timeline .timeline-block .timeline-content .timeline-dot {
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  background-color: #7cb342;
+  text-align: center;
+}
+.timeline .timeline-block .timeline-content .timeline-dot h4 {
+  font-size: 1.7rem;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block .timeline-content .timeline-dot h4 {
+    padding: 0.25rem;
+  }
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block .timeline-content .timeline-dot {
+    padding-top: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.timeline .timeline-block .timeline-content .timeline-dot::before {
+  content: "";
+  position: absolute;
+  top: -3.5rem;
+  right: -3.5rem;
+  width: 7rem;
+  height: 7rem;
+  background-color: #7cb342;
+  z-index: -1;
+  transform: rotate(45deg);
+  box-shadow: inset 0 -1px 2px 1px rgba(0, 0, 0, 0.14), inset 0 -2px 2px 2px rgba(0, 0, 0, 0.18), inset 0 -2px 2px -1px rgba(0, 0, 0, 0.28);
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block .timeline-content .timeline-dot {
+    border-radius: 50%;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+  .timeline .timeline-block .timeline-content .timeline-dot::before {
+    width: 0;
+    height: 0;
+  }
+}
+
+.card {
+  margin: 0;
+}
+@media only screen and (min-width : 993px) {
+  .card {
+    margin: 0.5rem 0 1rem 0;
+  }
+}
+
+#skills .card h5 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
 
 /*# sourceMappingURL=style.css.map */

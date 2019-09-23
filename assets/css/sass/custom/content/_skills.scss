@@ -1,0 +1,7 @@
+#skills {
+    .card {
+        h5 {
+            @include text-shadow;
+        }
+    }
+}
