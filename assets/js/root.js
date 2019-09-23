@@ -80,3 +80,12 @@ var skills = new Vue({
 
 
 })
+
+var contact = new Vue({
+    el: '#contact',
+    data: {
+        name: '',
+        content: '',
+        subject: ''
+    }
+})

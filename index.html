@@ -323,22 +323,25 @@
             <div class="card-content">
               <form action="#" method="get">
                 <div class="input-field">
-                  <input id="last_name" type="text" class="validate">
-                  <label for="last_name">Last Name</label>
+                  <input id="name" v-model='name' type="text" class="validate">
+                  <label for="name">Name</label>
                 </div>
                 <div class="input-field">
+                  <input id="subject" v-model='subject' type="text" class="validate">
+                  <label for="subject">Subject</label>
+                </div>
+                <!-- <div class="input-field">
                   <input id="last_name" type="text" class="validate">
                   <label for="last_name">Last Name</label>
-                </div>
+                </div> -->
                 <div class="input-field">
-                  <input id="last_name" type="text" class="validate">
-                  <label for="last_name">Last Name</label>
-                </div>
-                <div class="input-field">
-                  <textarea id="textarea" class="materialize-textarea" data-length="120" rows="4"></textarea>
+                  <textarea id="textarea" v-model='content' class="materialize-textarea" data-length="120"
+                    rows="4"></textarea>
                   <label for="textarea">Textarea</label>
                 </div>
-                <btn type='btn' class="btn bg-primary-hov">Touch Me</btn>
+                <p>{{name}}</p>
+                <a :href='`mailto:aditya.sandy16@gmail.com?subject=${subject}&body=${content}`'
+                  class="btn bg-primary-hov">Touch Me</a>
               </form>
             </div>
           </div>
