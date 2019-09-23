@@ -1,6 +1,14 @@
 .timeline {
     position: relative;
 
+    .card {
+        margin: 0;
+
+        @media #{$large-and-up} {
+            margin: 0.5rem 0 1rem 0;
+        }
+    }
+
     .timeline-block {
         position: relative;
 
@@ -196,10 +204,8 @@
     }
 }
 
-.card {
-    margin: 0;
 
-    @media #{$large-and-up} {
-        margin: 0.5rem 0 1rem 0;
-    }
+.elip {
+    font-size: 1.5rem;
+    margin-top: -1em;
 }

@@ -1,0 +1,17 @@
+#contact {
+    .row {
+        @media #{$large-and-up} {
+            display: flex;
+        }
+
+        .card {
+            @media #{$large-and-up} {
+                margin: 0;
+            }
+        }
+    }
+}
+
+#map {
+    min-height: 423px;
+}

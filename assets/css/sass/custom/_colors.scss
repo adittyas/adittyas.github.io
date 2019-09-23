@@ -20,5 +20,16 @@ $blue: #311b92;
             background-color: darken($primary, 10%) !important;
         }
     }
+}
 
+.txt-primary {
+    color: $primary !important;
+
+    &-hov {
+        color: $primary !important;
+
+        &:hover {
+            color: darken($primary, 10%) !important;
+        }
+    }
 }

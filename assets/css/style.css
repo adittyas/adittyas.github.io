@@ -8349,6 +8349,16 @@ input[type=range]::-ms-thumb {
   background-color: #628e34 !important;
 }
 
+.txt-primary {
+  color: #7cb342 !important;
+}
+.txt-primary-hov {
+  color: #7cb342 !important;
+}
+.txt-primary-hov:hover {
+  color: #628e34 !important;
+}
+
 @font-face {
   font-family: "nunitosans-regular-webfont";
   src: url("../fonts/nunitosans-regular-webfont.eot");
@@ -8364,6 +8374,16 @@ input[type=range]::-ms-thumb {
 }
 .bg-primary-hov:hover {
   background-color: #628e34 !important;
+}
+
+.txt-primary {
+  color: #7cb342 !important;
+}
+.txt-primary-hov {
+  color: #7cb342 !important;
+}
+.txt-primary-hov:hover {
+  color: #628e34 !important;
 }
 
 .no-gutters > .col,
@@ -8505,6 +8525,12 @@ body {
   font-size: inherit;
   line-height: 1.5;
   font-family: "nunitosans-regular-webfont", Arial, Helvetica, sans-serif;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 #ham {
@@ -8677,8 +8703,27 @@ body {
   padding: 20px;
 }
 
+#interest .row {
+  border-top: thin solid #e6e6e6;
+}
+#interest .row .col {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+#interest i {
+  font-size: 2rem;
+}
+
 .timeline {
   position: relative;
+}
+.timeline .card {
+  margin: 0;
+}
+@media only screen and (min-width : 993px) {
+  .timeline .card {
+    margin: 0.5rem 0 1rem 0;
+  }
 }
 .timeline .timeline-block {
   position: relative;
@@ -8847,17 +8892,28 @@ body {
   }
 }
 
-.card {
-  margin: 0;
-}
-@media only screen and (min-width : 993px) {
-  .card {
-    margin: 0.5rem 0 1rem 0;
-  }
+.elip {
+  font-size: 1.5rem;
+  margin-top: -1em;
 }
 
 #skills .card h5 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+}
+
+@media only screen and (min-width : 993px) {
+  #contact .row {
+    display: flex;
+  }
+}
+@media only screen and (min-width : 993px) {
+  #contact .row .card {
+    margin: 0;
+  }
+}
+
+#map {
+  min-height: 423px;
 }
 
 /*# sourceMappingURL=style.css.map */
