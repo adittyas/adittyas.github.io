@@ -1,45 +1,48 @@
 @charset "UTF-8";
 
+/*!
+ * Materalize v1.0.0 (https://materializecss.com/
+ */
+
 // Color
-@import "materialize/color-variables";
-@import "materialize/color-classes";
+@import "../../../vendors/materialize/sass/color-variables";
+@import "../../../vendors/materialize/sass/color-classes";
 
 // Variables;
-@import "materialize/variables";
+@import "../../../vendors/materialize/sass/variables";
 
 // Reset
-@import "materialize/normalize";
+@import "../../../vendors/materialize/sass/normalize";
 
 // materialize
-@import "materialize/global";
-@import "materialize/badges";
-@import "materialize/icons-material-design";
-@import "materialize/grid";
-@import "materialize/navbar";
-@import "materialize/typography";
-@import "materialize/transitions";
-@import "materialize/cards";
-@import "materialize/toast";
-@import "materialize/tabs";
-@import "materialize/tooltip";
-@import "materialize/buttons";
-@import "materialize/dropdown";
-@import "materialize/waves";
-@import "materialize/modal";
-@import "materialize/collapsible";
-@import "materialize/chips";
-@import "materialize/materialbox";
-@import "materialize/forms/forms";
-@import "materialize/table_of_contents";
-@import "materialize/sidenav";
-@import "materialize/preloader";
-@import "materialize/slider";
-@import "materialize/carousel";
-@import "materialize/tapTarget";
-@import "materialize/pulse";
-@import "materialize/datepicker";
-@import "materialize/timepicker";
-
+@import "../../../vendors/materialize/sass/global";
+@import "../../../vendors/materialize/sass/badges";
+@import "../../../vendors/materialize/sass/icons-material-design";
+@import "../../../vendors/materialize/sass/grid";
+@import "../../../vendors/materialize/sass/navbar";
+@import "../../../vendors/materialize/sass/typography";
+@import "../../../vendors/materialize/sass/transitions";
+@import "../../../vendors/materialize/sass/cards";
+@import "../../../vendors/materialize/sass/toast";
+@import "../../../vendors/materialize/sass/tabs";
+@import "../../../vendors/materialize/sass/tooltip";
+@import "../../../vendors/materialize/sass/buttons";
+@import "../../../vendors/materialize/sass/dropdown";
+@import "../../../vendors/materialize/sass/waves";
+@import "../../../vendors/materialize/sass/modal";
+@import "../../../vendors/materialize/sass/collapsible";
+@import "../../../vendors/materialize/sass/chips";
+@import "../../../vendors/materialize/sass/materialbox";
+@import "../../../vendors/materialize/sass/forms/forms";
+@import "../../../vendors/materialize/sass/table_of_contents";
+@import "../../../vendors/materialize/sass/sidenav";
+@import "../../../vendors/materialize/sass/preloader";
+@import "../../../vendors/materialize/sass/slider";
+@import "../../../vendors/materialize/sass/carousel";
+@import "../../../vendors/materialize/sass/tapTarget";
+@import "../../../vendors/materialize/sass/pulse";
+@import "../../../vendors/materialize/sass/datepicker";
+@import "../../../vendors/materialize/sass/timepicker";
 
 // hamburgers icon
 /*!
@@ -52,95 +55,96 @@
 
 // Settings
 // ==================================================
-$hamburger-padding-x : 10px !default;
-$hamburger-padding-y : 10px !default;
-$hamburger-layer-width : 40px !default;
-$hamburger-layer-height : 4px !default;
-$hamburger-layer-spacing : 6px !default;
-$hamburger-layer-color : rgb(255, 255, 255) !default;
-$hamburger-layer-border-radius : 0px !default;
-$hamburger-hover-opacity : 0.7 !default;
-$hamburger-active-layer-color : $hamburger-layer-color !default;
+$hamburger-padding-x: 8px !default;
+$hamburger-padding-y: 8px !default;
+$hamburger-layer-width: 30px !default;
+$hamburger-layer-height: 4px !default;
+$hamburger-layer-spacing: 4px !default;
+$hamburger-layer-color: rgb(255, 255, 255) !default;
+$hamburger-layer-border-radius: 0px !default;
+$hamburger-hover-opacity: 0.7 !default;
+$hamburger-active-layer-color: $hamburger-layer-color !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
 // To use CSS filters as the hover effect instead of opacity,
 // set $hamburger-hover-use-filter as true and
 // change the value of $hamburger-hover-filter accordingly.
-$hamburger-hover-use-filter : false !default;
-$hamburger-hover-filter : opacity(50%) !default;
+$hamburger-hover-use-filter: false !default;
+$hamburger-hover-filter: opacity(50%) !default;
 $hamburger-active-hover-filter: $hamburger-hover-filter !default;
 
 // Types (Remove or comment out what you don’t need)
 // ==================================================
 $hamburger-types: (3dx,
-    // 3dx-r,
-    // 3dy,
-    // 3dy-r,
-    // 3dxy,
-    // 3dxy-r,
-    // arrow,
-    // arrow-r,
-    // arrowalt,
-    // arrowalt-r,
-    // arrowturn,
-    // arrowturn-r,
-    // boring,
-    collapse,
-    collapse-r,
-    elastic,
-    elastic-r,
-    // emphatic,
-    // emphatic-r,
-    // minus,
-    // slider,
-    // slider-r,
-    // spin,
-    // spin-r,
-    // spring,
-    // spring-r,
-    // stand,
-    // stand-r,
-    // squeeze,
-    // vortex,
-    vortex-r) !default;
+  // 3dx-r,
+  // 3dy,
+  // 3dy-r,
+  // 3dxy,
+  // 3dxy-r,
+  // arrow,
+  // arrow-r,
+  // arrowalt,
+  // arrowalt-r,
+  // arrowturn,
+  // arrowturn-r,
+  // boring,
+  collapse,
+  collapse-r,
+  elastic,
+  elastic-r,
+  // emphatic,
+  // emphatic-r,
+  // minus,
+  // slider,
+  // slider-r,
+  // spin,
+  // spin-r,
+  // spring,
+  // spring-r,
+  // stand,
+  // stand-r,
+  // squeeze,
+  // vortex,
+  vortex-r) !default;
 
 // Base Hamburger (We need this)
 // ==================================================
-@import "hamburgers/base";
+@import "../../../vendors/hamburgers/base";
 
 // Hamburger types
 // ==================================================
-@import "hamburgers/types/3dx";
-@import "hamburgers/types/3dx-r";
-@import "hamburgers/types/3dy";
-@import "hamburgers/types/3dy-r";
-@import "hamburgers/types/3dxy";
-@import "hamburgers/types/3dxy-r";
-@import "hamburgers/types/arrow";
-@import "hamburgers/types/arrow-r";
-@import "hamburgers/types/arrowalt";
-@import "hamburgers/types/arrowalt-r";
-@import "hamburgers/types/arrowturn";
-@import "hamburgers/types/arrowturn-r";
-@import "hamburgers/types/boring";
-@import "hamburgers/types/collapse";
-@import "hamburgers/types/collapse-r";
-@import "hamburgers/types/elastic";
-@import "hamburgers/types/elastic-r";
-@import "hamburgers/types/emphatic";
-@import "hamburgers/types/emphatic-r";
-@import "hamburgers/types/minus";
-@import "hamburgers/types/slider";
-@import "hamburgers/types/slider-r";
-@import "hamburgers/types/spin";
-@import "hamburgers/types/spin-r";
-@import "hamburgers/types/spring";
-@import "hamburgers/types/spring-r";
-@import "hamburgers/types/stand";
-@import "hamburgers/types/stand-r";
-@import "hamburgers/types/squeeze";
-@import "hamburgers/types/vortex";
-@import "hamburgers/types/vortex-r";
+@import "../../../vendors/hamburgers/types/3dx";
+@import "../../../vendors/hamburgers/types/3dx-r";
+@import "../../../vendors/hamburgers/types/3dy";
+@import "../../../vendors/hamburgers/types/3dy-r";
+@import "../../../vendors/hamburgers/types/3dxy";
+@import "../../../vendors/hamburgers/types/3dxy-r";
+@import "../../../vendors/hamburgers/types/arrow";
+@import "../../../vendors/hamburgers/types/arrow-r";
+@import "../../../vendors/hamburgers/types/arrowalt";
+@import "../../../vendors/hamburgers/types/arrowalt-r";
+@import "../../../vendors/hamburgers/types/arrowturn";
+@import "../../../vendors/hamburgers/types/arrowturn-r";
+@import "../../../vendors/hamburgers/types/boring";
+@import "../../../vendors/hamburgers/types/collapse";
+@import "../../../vendors/hamburgers/types/collapse-r";
+@import "../../../vendors/hamburgers/types/elastic";
+@import "../../../vendors/hamburgers/types/elastic-r";
+@import "../../../vendors/hamburgers/types/emphatic";
+@import "../../../vendors/hamburgers/types/emphatic-r";
+@import "../../../vendors/hamburgers/types/minus";
+@import "../../../vendors/hamburgers/types/slider";
+@import "../../../vendors/hamburgers/types/slider-r";
+@import "../../../vendors/hamburgers/types/spin";
+@import "../../../vendors/hamburgers/types/spin-r";
+@import "../../../vendors/hamburgers/types/spring";
+@import "../../../vendors/hamburgers/types/spring-r";
+@import "../../../vendors/hamburgers/types/stand";
+@import "../../../vendors/hamburgers/types/stand-r";
+@import "../../../vendors/hamburgers/types/squeeze";
+@import "../../../vendors/hamburgers/types/vortex";
+@import "../../../vendors/hamburgers/types/vortex-r";
+
 // ==================================================
 // Cooking up additional types:
 //
@@ -157,15 +161,12 @@ $hamburger-types: (3dx,
 //   }
 // }
 
-
-
 // utilitiers
 @import "custom/colors";
 @import "custom/breakpoint";
 @import "custom/functions";
 @import "custom/mixins";
 @import "custom/fonts";
-
 
 // custom css
 @import "custom/colors.scss";
@@ -178,3 +179,9 @@ $hamburger-types: (3dx,
 @import "custom/content/timeline.scss";
 @import "custom/content/skills.scss";
 @import "custom/content/contact.scss";
+@import "custom/content/circle-bar.scss";
+@import "custom/content/ham.scss";
+@import "custom/content/portofolios.scss";
+
+
+@import "../../../vendors/progress-cirlce/progress-circle.scss";
