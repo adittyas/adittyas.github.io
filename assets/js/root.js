@@ -1,6 +1,6 @@
 Vue.component('skills-template', {
     template: '#post-skill',
-    props: ['name', 'progress', 'key']
+    props: ['name', 'progress']
 })
 var skills = new Vue({
     el: '#skills',
