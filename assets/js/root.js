@@ -28,7 +28,7 @@ var skills = new Vue({
         }, {
             id: 6,
             text: 'vue.js',
-            percent: '60'
+            percent: '55'
         }, {
             id: 7,
             text: 'Codeignitier',

@@ -1,6 +1,7 @@
     html {
         color: $font-color !important;
         font-size: 15px !important;
+        scroll-behavior: smooth;
     }
 
     body {
@@ -14,4 +15,38 @@
         width: 100%;
         // h    ight: 100%;
         display: block;
+    }
+
+    .logo-flat {
+        background-color: $primary;
+        height: 150px;
+        // line-height: 200px;
+        position: relative;
+
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $primary;
+
+            font-size: 5em;
+
+            color: $white;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -50%;
+                width: 200%;
+                height: 100%;
+                border: 6px solid $white;
+            }
+        }
+    }
+
+
+    .sidenav {
+        width: 200px;
     }
