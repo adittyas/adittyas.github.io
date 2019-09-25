@@ -147,14 +147,15 @@
                 display: block;
 
                 h4 {
-                    font-size: unit(25);
+                    font-size: unit(22);
 
                     padding: {
-                        top: unit(7.5);
-                        right: unit(7.5);
+                        top: unit(6);
+                        right: unit(8);
                     }
 
                     @media #{$large-and-up} {
+                        font-size: unit(25);
                         padding: unit(6);
                     }
 
@@ -170,18 +171,19 @@
                 text-align: center;
 
                 @media #{$large-and-up} {
-                    padding-top: unit(7.5);
+                    padding-top: unit(4);
                     width: unit(45);
                     height: unit(45);
                 }
 
                 &::before {
                     content: '';
+                    border-radius: 50%;
                     position: absolute;
                     top: unit(-45);
                     right: unit(-45);
-                    width: unit(105);
-                    height: unit(105);
+                    width: unit(90);
+                    height: unit(90);
                     background-color: $primer;
                     z-index: -1;
                     transform: rotate(45deg);
