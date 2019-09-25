@@ -8102,23 +8102,23 @@ input[type=range]::-ms-thumb {
  * @link https://github.com/jonsuh/hamburgers
  */
 .bg-primary {
-  background-color: #7cb342 !important;
+  background-color: #388e3c !important;
 }
 .bg-primary-hov {
-  background-color: #7cb342 !important;
+  background-color: #388e3c !important;
 }
 .bg-primary-hov:hover {
-  background-color: #486827 !important;
+  background-color: #1b451d !important;
 }
 
 .txt-primary {
-  color: #7cb342 !important;
+  color: #388e3c !important;
 }
 .txt-primary-hov {
-  color: #7cb342 !important;
+  color: #388e3c !important;
 }
 .txt-primary-hov:hover {
-  color: #486827 !important;
+  color: #1b451d !important;
 }
 
 @font-face {
@@ -8129,23 +8129,23 @@ input[type=range]::-ms-thumb {
   font-style: normal;
 }
 .bg-primary {
-  background-color: #7cb342 !important;
+  background-color: #388e3c !important;
 }
 .bg-primary-hov {
-  background-color: #7cb342 !important;
+  background-color: #388e3c !important;
 }
 .bg-primary-hov:hover {
-  background-color: #486827 !important;
+  background-color: #1b451d !important;
 }
 
 .txt-primary {
-  color: #7cb342 !important;
+  color: #388e3c !important;
 }
 .txt-primary-hov {
-  color: #7cb342 !important;
+  color: #388e3c !important;
 }
 .txt-primary-hov:hover {
-  color: #486827 !important;
+  color: #1b451d !important;
 }
 
 .no-gutters > .col,
@@ -8289,7 +8289,7 @@ iframe {
 }
 
 .logo-flat {
-  background-color: #7cb342;
+  background-color: #388e3c;
   height: 10rem;
   position: relative;
 }
@@ -8298,7 +8298,7 @@ iframe {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #7cb342;
+  background-color: #388e3c;
   font-size: 5rem;
   color: #fefefe;
 }
@@ -8351,6 +8351,9 @@ iframe {
 
 #v-card {
   margin-top: -14.3333333333rem !important;
+}
+#v-card .card-panel {
+  background-color: #388e3c;
 }
 
 .info {
@@ -8450,11 +8453,11 @@ iframe {
   }
   .slant.one {
     left: 0;
-    border-color: transparent transparent transparent #7cb342;
+    border-color: transparent transparent transparent #388e3c;
   }
   .slant.two {
     right: 0;
-    border-color: #7cb342 transparent transparent transparent;
+    border-color: #388e3c transparent transparent transparent;
   }
 }
 
@@ -8512,7 +8515,7 @@ iframe {
   position: absolute;
   width: 4px;
   height: 100%;
-  background-color: #aed388;
+  background-color: #68c46d;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -8529,45 +8532,56 @@ iframe {
 @media only screen and (min-width : 993px) {
   .timeline .card {
     margin: 0.5rem 0 1rem 0;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+}
+.timeline .card::before {
+  content: "";
+  width: 0.3333333333rem;
+  height: 100%;
+  background-color: #ae4ab8;
+  position: absolute;
+  border-radius: 0.1333333333rem 0 0 0.1333333333rem;
+  top: 0;
+  z-index: 2;
+}
+@media only screen and (min-width : 993px) {
+  .timeline .card::after {
+    content: "";
+    width: 3rem;
+    height: 0.2666666667rem;
+    background-color: #68c46d;
+    position: absolute;
+    top: 1.6666666667rem;
+    z-index: 0;
+    border-radius: 0.1333333333rem 0 0 0.1333333333rem;
   }
 }
 .timeline .timeline-block {
   position: relative;
 }
 @media only screen and (min-width : 993px) {
-  .timeline .timeline-block:nth-of-type(n+2) {
+  .timeline .timeline-block:nth-of-type(n + 2) {
     margin-top: -7rem;
   }
 }
-@media only screen and (min-width : 993px) {
+@media only screen and (min-width : 993px) and (min-width : 993px) {
   .timeline .timeline-block:not(:last-child)::before {
     content: "";
     width: 4px;
-    height: calc(100% + 15px);
-    background-color: #aed388;
+    height: calc(100% - 86px);
+    background-color: #68c46d;
     position: absolute;
-    top: 1rem;
+    top: 1.6666666667rem;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
     z-index: 1;
   }
 }
-@media only screen and (min-width : 993px) and (min-width : 993px) {
-  .timeline .timeline-block:not(:last-child)::before {
-    height: calc(100% - 75px);
-  }
-}
 @media only screen and (min-width : 993px) {
-  .timeline .timeline-block::after {
-    content: "";
-    width: 50%;
-    height: 0.2666666667rem;
-    background-color: #aed388;
-    position: absolute;
-    top: 1.4rem;
-    z-index: 0;
-    border-radius: 0.1333333333rem 0 0 0.1333333333rem;
+  .timeline .timeline-block:nth-of-type(odd) .card::after {
+    left: 100%;
   }
 }
 .timeline .timeline-block:nth-of-type(odd)::after {
@@ -8593,6 +8607,11 @@ iframe {
 @media only screen and (min-width : 993px) {
   .timeline .timeline-block:nth-of-type(odd) {
     padding-right: 50%;
+  }
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block:nth-of-type(even) .card::after {
+    right: 100%;
   }
 }
 .timeline .timeline-block:nth-of-type(even)::after {
@@ -8624,10 +8643,10 @@ iframe {
   }
 }
 .timeline .timeline-block .timeline-content {
+  overflow: hidden;
   position: relative;
   width: 100%;
   z-index: 1;
-  overflow: hidden;
   margin: 0.5rem 0 1rem 0;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   border-radius: 0.1333333333rem;
@@ -8639,22 +8658,12 @@ iframe {
     box-shadow: none;
   }
 }
-.timeline .timeline-block .timeline-content::before {
-  content: "";
-  width: 10px;
-  height: 100%;
-  background-color: #ae4ab8;
-  position: absolute;
-  border-radius: 0.1333333333rem 0 0 0.1333333333rem;
-  top: 0;
-  z-index: 2;
-}
 .timeline .timeline-block .timeline-content .timeline-dot {
   display: block;
   position: absolute;
   top: 0;
   z-index: 5;
-  background-color: #7cb342;
+  background-color: #388e3c;
   text-align: center;
 }
 .timeline .timeline-block .timeline-content .timeline-dot h4 {
@@ -8686,7 +8695,7 @@ iframe {
   right: -3rem;
   width: 6rem;
   height: 6rem;
-  background-color: #7cb342;
+  background-color: #388e3c;
   z-index: -1;
   transform: rotate(45deg);
   box-shadow: inset 0 -1px 2px 1px rgba(0, 0, 0, 0.14), inset 0 -2px 2px 2px rgba(0, 0, 0, 0.18), inset 0 -2px 2px -1px rgba(0, 0, 0, 0.28);
@@ -8729,7 +8738,7 @@ iframe {
 }
 
 #map {
-  min-height: 23.6rem;
+  min-height: 22.6611333333rem;
 }
 
 .lds-ellipsis {

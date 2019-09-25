@@ -7,6 +7,10 @@ $pad-card: unit(45);
 
 #v-card {
     margin-top: unit(-215) !important;
+
+    .card-panel {
+        background-color: $primer;
+    }
 }
 
 .info {

@@ -24,62 +24,83 @@
 
         @media #{$large-and-up} {
             margin: unit(7.5) 0 unit(15) 0;
+            @include box-shadow;
         }
+
+        &::before {
+            content: "";
+            width: unit(5);
+            height: 100%;
+            background-color: $sekunder-lighten;
+            position: absolute;
+            border-radius: unit(2) 0 0 unit(2);
+            top: 0;
+            z-index: 2;
+        }
+
+        &::after {
+            @media #{$large-and-up} {
+                content: "";
+                width: unit(45);
+                height: unit(4);
+                background-color: $primer-lighten;
+                position: absolute;
+                top: unit(25);
+                z-index: 0;
+                border-radius: unit(2) 0 0 unit(2);
+            }
+        }
+
+
     }
 
     .timeline-block {
         position: relative;
 
-        &:nth-of-type(n+2) {
+
+        &:nth-of-type(n + 2) {
             @media #{$large-and-up} {
                 margin-top: unit(-105);
             }
-
         }
 
         @media #{$large-and-up} {
-
             &:not(:last-child) {
                 &::before {
-                    content: '';
-                    width: 4px;
-                    height: calc(100% + 15px);
-
                     @media #{$large-and-up} {
-                        height: calc(100% - 75px);
+                        content: "";
+                        width: 4px;
+                        height: calc(100% - 86px);
+                        background-color: $primer-lighten;
+                        position: absolute;
+                        top: unit(25);
+                        left: 50%;
+                        bottom: 0;
+                        transform: translateX(-50%);
+                        z-index: 1;
                     }
-
-                    background-color: $primer-lighten;
-                    position: absolute;
-                    top: unit(15);
-                    left: 50%;
-                    bottom: 0;
-                    transform: translateX(-50%);
-                    z-index: 1;
                 }
             }
         }
 
-        &::after {
-            @media #{$large-and-up} {
-                content: '';
-                width: 50%;
-                height: unit(4);
-                background-color: $primer-lighten;
-                position: absolute;
-                top: unit(21);
-                z-index: 0;
-                border-radius: unit(2) 0 0 unit(2);
-            }
 
-        }
 
         &:nth-of-type(odd) {
+            .card {
+                &::after {
+                    @media #{$large-and-up} {
+                        left: 100%;
+                    }
+                }
+            }
+
             &::after {
                 left: 0;
             }
 
             .timeline-content {
+
+
                 @media #{$large-and-up} {
                     padding-right: unit(45);
                 }
@@ -99,10 +120,17 @@
             @media #{$large-and-up} {
                 padding-right: 50%;
             }
-
         }
 
         &:nth-of-type(even) {
+            .card {
+                &::after {
+                    @media #{$large-and-up} {
+                        right: 100%;
+                    }
+                }
+            }
+
             &::after {
                 left: 50%;
             }
@@ -134,13 +162,11 @@
             }
         }
 
-
         .timeline-content {
-
+            overflow: hidden;
             position: relative;
             width: 100%;
             z-index: 1;
-            overflow: hidden;
             margin: unit(7.5) 0 unit(15) 0;
             @include box-shadow;
             border-radius: unit(2);
@@ -151,19 +177,8 @@
                 box-shadow: none;
             }
 
-            &::before {
-                content: '';
-                width: 10px;
-                height: 100%;
-                background-color: $sekunder-lighten;
-                position: absolute;
-                border-radius: unit(2) 0 0 unit(2);
-                top: 0;
-                z-index: 2;
-            }
-
             .timeline-dot {
-
+                // display: none;
                 // @media #{$large-and-up} {
                 display: block;
 
@@ -188,7 +203,7 @@
                 position: absolute;
                 top: 0;
                 z-index: 5;
-                background-color:$primer;
+                background-color: $primer;
                 text-align: center;
 
                 @media #{$large-and-up} {
@@ -198,7 +213,7 @@
                 }
 
                 &::before {
-                    content: '';
+                    content: "";
                     border-radius: 50%;
                     position: absolute;
                     top: unit(-45);
@@ -208,7 +223,9 @@
                     background-color: $primer;
                     z-index: -1;
                     transform: rotate(45deg);
-                    box-shadow: inset 0 -1px 2px 1px rgba(0, 0, 0, 0.14), inset 0 -2px 2px 2px rgba(0, 0, 0, 0.18), inset 0 -2px 2px -1px rgba(0, 0, 0, 0.28);
+                    box-shadow: inset 0 -1px 2px 1px rgba(0, 0, 0, 0.14),
+                        inset 0 -2px 2px 2px rgba(0, 0, 0, 0.18),
+                        inset 0 -2px 2px -1px rgba(0, 0, 0, 0.28);
                 }
 
                 @media #{$large-and-up} {
@@ -226,7 +243,6 @@
         }
     }
 }
-
 
 .elip {
     font-size: unit(22.5);

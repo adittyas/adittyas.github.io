@@ -71,7 +71,7 @@
     <!-- v-cards  start-->
     <div id='v-card' class="scroll section no-pad">
       <div class="container">
-        <div class="card-panel light-green darken-1 hoverable pos-relative no-margin">
+        <div class="card-panel hoverable pos-relative no-margin">
           <div class="white-text w-100 info">
             <div class="info-heading">
               <h3>ADITYA</h3>
@@ -102,6 +102,8 @@
                   class="fab fa-instagram"></i></a>
               <a href="tel:+6281294924241" class="btn-floating pulse lime lighten-1"><i
                   class="fas fa-phone-alt"></i></a>
+              <a href="mailto:aditya.sandy16@gmail.com" class="btn-floating pulse green lighten-1"><i
+                  class="fas fa-envelope"></i></a>
             </div>
           </div>
           <div class="right" id="profilepic">
@@ -143,11 +145,11 @@
         </div>
         <div class="timeline">
           <div class="timeline-block">
-            <div class="timeline-content" data-aos="zoom-in">
-              <div class="timeline-dot" data-aos="zoom-in">
+            <div class="timeline-content">
+              <div class="timeline-dot" data-aos="zoom-in" data-aos-duration="1500">
                 <h4 class="txt-upper">H</h4>
               </div>
-              <div class="card">
+              <div class="card" data-aos="zoom-in">
                 <div class=" card-action">
                   <h5 class="bold">High School</h5>
                   <h6>SMAN 5 Bekasi<br />2006-2009</h6>
@@ -161,12 +163,12 @@
           </div>
           <div class="timeline-block">
             <div class="timeline-content">
-              <div class="timeline-dot">
+              <div class="timeline-dot" data-aos="zoom-in" data-aos-duration="1500">
                 <h4 class="txt-upper">
                   U
                 </h4>
               </div>
-              <div class="card">
+              <div class="card" data-aos="zoom-in">
                 <div class="card-action">
                   <h5 class="bold">University</h5>
                   <h6>STMIK Mercusuar Bekasi<br />2012-2017</h6>
@@ -246,7 +248,7 @@
               </div>
             </div>
           </div>
-          <div class="col s12 l4" data-aos="zoom-in" data-aos-duration="2000">
+          <div class="col s12 l4" data-aos="zoom-in">
             <div class="card">
               <div class="card-content">
                 <a href="https://adittyas.github.io/template/piroll/">
@@ -261,7 +263,7 @@
               </div>
             </div>
           </div>
-          <div class="col s12 l4" data-aos="zoom-in" data-aos-duration="3000">
+          <div class="col s12 l4" data-aos="zoom-in">
             <div class="card">
               <div class="card-content">
                 <a href="https://github.com/adittyas/login-codeignitier">
@@ -291,12 +293,12 @@
         <div class="timeline">
           <div class="timeline-block">
             <div class="timeline-content">
-              <div class="timeline-dot">
+              <div class="timeline-dot" data-aos="zoom-in" data-aos-duration="1500">
                 <h4 class="txt-upper">
                   <i class='fas fa-shopping-cart'></i>
                 </h4>
               </div>
-              <div class="card">
+              <div class="card" data-aos="zoom-in">
                 <div class="card-action">
                   <h5 class="bold">Sales Associate</h5>
                   <h6>PT Berca Retail Sportindo<br />2010-2015</h6>
@@ -313,12 +315,12 @@
           </div>
           <div class="timeline-block">
             <div class="timeline-content">
-              <div class="timeline-dot">
+              <div class="timeline-dot" data-aos="zoom-in" data-aos-duration="1500">
                 <h4 class="txt-upper">
                   <i class="fas fa-dollar-sign"></i>
                 </h4>
               </div>
-              <div class="card">
+              <div class="card" data-aos="zoom-in">
                 <div class="card-action">
                   <h5 class="bold">Customer Service Officer</h5>
                   <h6>PT Bank Central Asia Tbk<br />2015-2018</h6>
@@ -346,7 +348,7 @@
             <img src="/assets/images/heart.png" alt="layers" class="z-depth-2" data-aos="zoom-in" />Interest
           </h4>
         </div>
-        <div class="card">
+        <div class="card" data-aos="zoom-in">
           <div class="card-content">
             <p class="center-align">
               I really like traveling and climbing mountains, because the silence of the mountains makes me calm. I love
@@ -359,19 +361,19 @@
             <div class="col s6 l2 bg-primary white-text" data-aos="zoom-in" data-aos-duration="1500">
               <i class='fas fa-headphones'></i><BR>Music
             </div>
-            <div class="col s6 l2 txt-primary" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="col s6 l2 txt-primary" data-aos="zoom-in" data-aos-duration="1000">
               <i class='fas fa-mountain'></i><BR>Hiking
             </div>
             <div class="col s6 l2 bg-primary white-text" data-aos="zoom-in" data-aos-duration="1500">
               <i class='fas fa-walking'></i><BR>Travelling
             </div>
-            <div class="col s6 l2 txt-primary" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="col s6 l2 txt-primary" data-aos="zoom-in" data-aos-duration="1000">
               <i class='fas fa-film'></i><BR>Movies
             </div>
             <div class="col s6 l2 bg-primary white-text" data-aos="zoom-in" data-aos-duration="1500">
               <i class='fas fa-dumbbell'></i><BR>Gym
             </div>
-            <div class="col s6 l2 txt-primary" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="col s6 l2 txt-primary" data-aos="zoom-in" data-aos-duration="1000">
               <i class='fas fa-hamburger'></i><BR>Food
             </div>
           </div>
@@ -408,7 +410,7 @@
                   <div class="input-field">
                     <textarea id="textarea" v-model='content' class="materialize-textarea" data-length="120"
                       rows="4"></textarea>
-                    <label for="textarea">Textarea</label>
+                    <label for="textarea">Message</label>
                   </div>
                   <p>{{name}}</p>
                   <a :href='`mailto:aditya.sandy16@gmail.com?subject=${subject}&body=${content}`'
@@ -465,7 +467,7 @@
   <script type="text/javascript" src="/vendors/aos/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 1000,
+      duration: 700,
       once: false
     });
   </script>
