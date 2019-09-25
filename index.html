@@ -10,17 +10,20 @@
   <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css" />
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- title icon -->
+  <link rel="icon" href="/assets/images/brain.png" type="image/gif" sizes="16x16"> 
   <!-- title -->
   <title>adittyas</title>
 
 </head>
 
-<body class="grey lighten-4">
+<body class="grey lighten-4" >
+  <div id='app'>
   <!-- start of header -->
   <header id="home">
     <div class="parallax-container" id="parallax-header">
       <div class="parallax">
-        <img src="https://source.unsplash.com/1600x900/?rock" />
+        <img src="https://source.unsplash.com/1600x900/?sea" />
       </div>
     </div>
     <ul id="slide-out" class="sidenav grey lighten-5">
@@ -29,25 +32,25 @@
         <div class="logo">A</div>
       </div>
       <li>
-        <a href="#home"> <i class="fas fa-home"></i>Home</a>
+        <a href="#home" v-smooth-scroll> <i class="fas fa-home"></i>Home</a>
       </li>
       <li>
-        <a href="#education"> <i class="fas fa-university"></i>Education</a>
+        <a href="#education" v-smooth-scroll> <i class="fas fa-university"></i>Education</a>
       </li>
       <li>
-        <a href="#skills"> <i class="fas fa-sliders-h"></i>Skills</a>
+        <a href="#skills" v-smooth-scroll> <i class="fas fa-sliders-h"></i>Skills</a>
       </li>
       <li>
-        <a href="#experience"> <i class="fas fa-box-open"></i>Experience</a>
+        <a href="#experience" v-smooth-scroll> <i class="fas fa-box-open"></i>Experience</a>
       </li>
       <li>
-        <a href="#portofolios"> <i class="fas fa-briefcase"></i>Portofolios</a>
+        <a href="#portofolios" v-smooth-scroll> <i class="fas fa-briefcase"></i>Portofolios</a>
       </li>
       <li>
-        <a href="#interest"> <i class="fas fa-heart"></i>interest</a>
+        <a href="#interest" v-smooth-scroll> <i class="fas fa-heart"></i>interest</a>
       </li>
       <li>
-        <a href="#contact"> <i class="fas fa-envelope"></i>Contact</a>
+        <a href="#contact" v-smooth-scroll> <i class="fas fa-envelope"></i>Contact</a>
       </li>
     </ul>
     <btn id="ham" data-target="slide-out" class="sidenav-trigger show-on-large">
@@ -57,11 +60,6 @@
         <div></div>
         <div></div>
       </div>
-      <!-- <button class="hamburger hamburger--collapse" type="button">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-      </button> -->
     </btn>
   </header>
   <!-- end of header navigation -->
@@ -123,7 +121,7 @@
         </div>
         <div class="card-action center-align">
           <a href="/assets/doc/CV_aditya_sandy.pdf" class="btn bg-primary-hov" download>Download CV</a>
-          <a href="#contact" class="scroll btn bg-primary-hov">Contact Me</a>
+          <a href="#contact" class="scroll btn bg-primary-hov" v-smooth-scroll>Contact Me</a>
         </div>
       </div>
     </div>
@@ -419,6 +417,7 @@
       </div>
     </div>
   </div>
+</div>
   <!-- end timeline experience -->
   <!-- templating for skills -->
   <template id="post-skill">
@@ -449,7 +448,13 @@
   <script type="text/javascript" src="/vendors/materialize/js/materialize.min.js"></script>
   <script type="text/javascript" src="assets/js/init.js"></script>
   <script type="text/javascript" src="assets/js/vue.js"></script>
+  <script type="text/javascript" src="assets/js/smooth-scroll.js"></script>
   <script type="text/javascript" src="assets/js/root.js"></script>
+   <!-- <script src="https://unpkg.com/vue/dist/vue.js"></script>  -->
+  <!-- <script src="https://unpkg.com/vue2-smooth-scroll"></script>  -->
+  <script>
+    
+  </script> 
 </body>
 
 </html>

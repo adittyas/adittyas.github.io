@@ -8,11 +8,11 @@ var skills = new Vue({
         profesionals: [{
             id: 1,
             text: 'HTML & HTML5',
-            percent: '80'
+            percent: '90'
         }, {
             id: 2,
             text: 'CSS & CSS3',
-            percent: '80'
+            percent: '85'
         }, {
             id: 3,
             text: 'Javascript',
@@ -28,7 +28,7 @@ var skills = new Vue({
         }, {
             id: 6,
             text: 'vue.js',
-            percent: '55'
+            percent: '50'
         }, {
             id: 7,
             text: 'Codeignitier',
@@ -41,7 +41,7 @@ var skills = new Vue({
         personal: [{
             id: 9,
             text: 'Active Learning',
-            percent: '90'
+            percent: '95'
         }, {
             id: 10,
             text: 'Communication',
@@ -49,11 +49,11 @@ var skills = new Vue({
         }, {
             id: 11,
             text: 'Teamwork',
-            percent: '60'
+            percent: '65'
         }, {
             id: 12,
             text: 'Dedication',
-            percent: '70'
+            percent: '80'
         }, {
             id: 13,
             text: 'Creativity',
@@ -75,6 +75,10 @@ var skills = new Vue({
             id: 17,
             text: 'mySql',
             percent: '70'
+        }, {
+            id: 18,
+            text: 'Figma / Avocode',
+            percent: '75'
         }]
     },
 
@@ -87,5 +91,15 @@ var contact = new Vue({
         name: '',
         content: '',
         subject: ''
+    }
+})
+const app = new Vue({
+    el: '#app',
+    data: {
+        // custom: {
+        //     duration: 500, // Animation speed
+        //     offset: 0, // Offset from element, you can use positive or negative values
+        //     container: '', // the scroll container, default is window,use document.querySelector to query the Element
+        // }
     }
 })

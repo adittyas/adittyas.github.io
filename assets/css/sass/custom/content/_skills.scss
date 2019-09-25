@@ -4,4 +4,12 @@
             @include text-shadow;
         }
     }
+
+    .progress {
+        background-color: $dark-lighten;
+
+        .determinate {
+            background-color: $white-lighten;
+        }
+    }
 }

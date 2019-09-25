@@ -1,35 +1,39 @@
 // primary color
 
-$white : #ffffff;
-$white2 : #fefefe;
+$white : #fefefe;
+$white-lighten: lighten($white, 15%);
+$white-darken: darken($white, 15%);
 $dark : #191919;
-$dark2 : #4c4c4c;
-
-$primary: #7cb342;
-$font-color: rgba(97, 97, 97);
-$blue: #311b92;
+$dark-lighten: lighten($dark, 30%);
+$dark-darken: darken($dark, 30%);
+$primer: #7cb342;
+$primer-lighten: lighten($primer, 20%);
+$primer-darken: darken($primer, 20%);
+$sekunder:#6a2c70;
+$sekunder-lighten: lighten($sekunder, 20%);
+$sekunder-darken: darken($sekunder, 20%);
 
 
 .bg-primary {
-    background-color: $primary !important;
+    background-color: $primer !important;
 
     &-hov {
-        background-color: $primary !important;
+        background-color: $primer !important;
 
         &:hover {
-            background-color: darken($primary, 10%) !important;
+            background-color: $primer-darken !important;
         }
     }
 }
 
 .txt-primary {
-    color: $primary !important;
+    color: $primer !important;
 
     &-hov {
-        color: $primary !important;
+        color: $primer !important;
 
         &:hover {
-            color: darken($primary, 10%) !important;
+            color: $primer-darken !important;
         }
     }
 }

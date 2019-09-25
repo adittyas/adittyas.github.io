@@ -1,7 +1,7 @@
     html {
-        color: $font-color !important;
+        color: $dark-lighten !important;
         font-size: 15px !important;
-        scroll-behavior: smooth;
+        // scroll-behavior: smooth;
     }
 
     body {
@@ -11,6 +11,11 @@
         font-family: 'nunitosans-regular-webfont', Arial, Helvetica, sans-serif;
     }
 
+    ::before,
+    ::after {
+        font-size: inherit;
+    }
+
     iframe {
         width: 100%;
         // h    ight: 100%;
@@ -18,8 +23,8 @@
     }
 
     .logo-flat {
-        background-color: $primary;
-        height: 150px;
+        background-color: $primer;
+        height: unit(150);
         // line-height: 200px;
         position: relative;
 
@@ -28,9 +33,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: $primary;
+            background-color: $primer;
 
-            font-size: 5em;
+            font-size: unit(75);
 
             color: $white;
 
@@ -41,12 +46,12 @@
                 left: -50%;
                 width: 200%;
                 height: 100%;
-                border: 6px solid $white;
+                border: unit(6) solid $white;
             }
         }
     }
 
 
     .sidenav {
-        width: 200px;
+        width: unit(200);
     }
