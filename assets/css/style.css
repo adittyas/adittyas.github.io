@@ -8469,8 +8469,13 @@ iframe {
   }
 }
 .links > a {
-  margin: 0 0.5rem;
+  margin: 0 0.2rem;
   border-radius: 50%;
+}
+@media only screen and (min-width : 993px) {
+  .links > a {
+    margin: 0 0.5rem;
+  }
 }
 
 .pulse::before {
@@ -8502,6 +8507,22 @@ iframe {
 .timeline {
   position: relative;
 }
+.timeline::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #aed388;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+@media only screen and (min-width : 993px) {
+  .timeline::before {
+    display: none;
+  }
+}
 .timeline .card {
   margin: 0;
 }
@@ -8518,19 +8539,21 @@ iframe {
     margin-top: -7rem;
   }
 }
-.timeline .timeline-block:not(:last-child)::before {
-  content: "";
-  width: 4px;
-  height: calc(100% + 15px);
-  background-color: #aed388;
-  position: absolute;
-  top: 1rem;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%);
-  z-index: 1;
-}
 @media only screen and (min-width : 993px) {
+  .timeline .timeline-block:not(:last-child)::before {
+    content: "";
+    width: 4px;
+    height: calc(100% + 15px);
+    background-color: #aed388;
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}
+@media only screen and (min-width : 993px) and (min-width : 993px) {
   .timeline .timeline-block:not(:last-child)::before {
     height: calc(100% - 75px);
   }

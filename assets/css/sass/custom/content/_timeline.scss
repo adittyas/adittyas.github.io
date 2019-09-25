@@ -1,6 +1,24 @@
 .timeline {
     position: relative;
 
+    &::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 100%;
+        background-color: $primer-lighten;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+
+    @media #{$large-and-up} {
+        &::before {
+            display: none;
+        }
+    }
+
     .card {
         margin: 0;
 
@@ -19,23 +37,26 @@
 
         }
 
-        &:not(:last-child) {
-            &::before {
-                content: '';
-                width: 4px;
-                height: calc(100% + 15px);
+        @media #{$large-and-up} {
 
-                @media #{$large-and-up} {
-                    height: calc(100% - 75px);
+            &:not(:last-child) {
+                &::before {
+                    content: '';
+                    width: 4px;
+                    height: calc(100% + 15px);
+
+                    @media #{$large-and-up} {
+                        height: calc(100% - 75px);
+                    }
+
+                    background-color: $primer-lighten;
+                    position: absolute;
+                    top: unit(15);
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    z-index: 1;
                 }
-
-                background-color: $primer-lighten;
-                position: absolute;
-                top: unit(15);
-                left: 50%;
-                bottom: 0;
-                transform: translateX(-50%);
-                z-index: 1;
             }
         }
 

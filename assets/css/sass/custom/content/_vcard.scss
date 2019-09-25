@@ -134,7 +134,12 @@ $pad-card: unit(45);
     }
 
     >a {
-        margin: 0 unit(7.5);
+        margin: 0 unit(3);
+
+        @media #{$large-and-up} {
+            margin: 0 unit(7.5);
+        }
+
         border-radius: 50%;
     }
 }
