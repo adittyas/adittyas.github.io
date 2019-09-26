@@ -14,7 +14,7 @@ $sekunder-lighten: lighten($sekunder, 20%);
 $sekunder-darken: darken($sekunder, 20%);
 
 
-.bg-primary {
+.bg-primer {
     background-color: $primer !important;
 
     &-hov {
@@ -26,7 +26,7 @@ $sekunder-darken: darken($sekunder, 20%);
     }
 }
 
-.txt-primary {
+.txt-primer {
     color: $primer !important;
 
     &-hov {

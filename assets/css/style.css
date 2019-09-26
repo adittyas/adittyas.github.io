@@ -8101,23 +8101,23 @@ input[type=range]::-ms-thumb {
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
-.bg-primary {
+.bg-primer {
   background-color: #388e3c !important;
 }
-.bg-primary-hov {
+.bg-primer-hov {
   background-color: #388e3c !important;
 }
-.bg-primary-hov:hover {
+.bg-primer-hov:hover {
   background-color: #1b451d !important;
 }
 
-.txt-primary {
+.txt-primer {
   color: #388e3c !important;
 }
-.txt-primary-hov {
+.txt-primer-hov {
   color: #388e3c !important;
 }
-.txt-primary-hov:hover {
+.txt-primer-hov:hover {
   color: #1b451d !important;
 }
 
@@ -8128,23 +8128,23 @@ input[type=range]::-ms-thumb {
   font-weight: 400;
   font-style: normal;
 }
-.bg-primary {
+.bg-primer {
   background-color: #388e3c !important;
 }
-.bg-primary-hov {
+.bg-primer-hov {
   background-color: #388e3c !important;
 }
-.bg-primary-hov:hover {
+.bg-primer-hov:hover {
   background-color: #1b451d !important;
 }
 
-.txt-primary {
+.txt-primer {
   color: #388e3c !important;
 }
-.txt-primary-hov {
+.txt-primer-hov {
   color: #388e3c !important;
 }
-.txt-primary-hov:hover {
+.txt-primer-hov:hover {
   color: #1b451d !important;
 }
 
@@ -8264,6 +8264,13 @@ input[type=range]::-ms-thumb {
 
 .bold {
   font-weight: 900;
+}
+
+.timeline .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-small):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: #388e3c;
+}
+.timeline .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-small):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
+  color: #68c46d;
 }
 
 html {
@@ -8856,6 +8863,7 @@ iframe {
   text-transform: uppercase;
 }
 #portofolios figure figcaption p {
+  display: none;
   color: #fefefe;
   position: absolute;
   width: 100%;

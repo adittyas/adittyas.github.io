@@ -1,9 +1,9 @@
 Vue.component('skills-template', {
     template: '#post-skill',
-    props: ['name', 'progress']
+    props: ['name', 'progress', 'id']
 })
-var skills = new Vue({
-    el: '#skills',
+var app = new Vue({
+    el: '#app',
     data: {
         profesionals: [{
             id: 1,
@@ -79,27 +79,30 @@ var skills = new Vue({
             id: 18,
             text: 'Figma / Avocode',
             percent: '75'
-        }]
+        }],
+        name: '',
+        content: '',
+        subject: ''
     },
 
 
 })
 
-var contact = new Vue({
-    el: '#contact',
-    data: {
-        name: '',
-        content: '',
-        subject: ''
-    }
-})
-const app = new Vue({
-    el: '#app',
-    data: {
-        // custom: {
-        //     duration: 500, // Animation speed
-        //     offset: 0, // Offset from element, you can use positive or negative values
-        //     container: '', // the scroll container, default is window,use document.querySelector to query the Element
-        // }
-    }
-})
+// var contact = new Vue({
+//     el: '#contact',
+//     data: {
+//         name: '',
+//         content: '',
+//         subject: ''
+//     }
+// })
+// const app = new Vue({
+//     el: '#app',
+//     data: {
+//         // custom: {
+//         //     duration: 500, // Animation speed
+//         //     offset: 0, // Offset from element, you can use positive or negative values
+//         //     container: '', // the scroll container, default is window,use document.querySelector to query the Element
+//         // }
+//     }
+// })

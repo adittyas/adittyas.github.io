@@ -1,0 +1,9 @@
+.timeline {
+    .card .card-action a:not(.btn):not(.btn-small):not(.btn-large):not(.btn-large):not(.btn-floating) {
+        color: $primer;
+
+        &:hover {
+            color: $primer-lighten;
+        }
+    }
+}

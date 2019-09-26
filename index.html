@@ -128,8 +128,8 @@
             </p>
           </div>
           <div class="card-action center-align">
-            <a href="/assets/doc/CV_aditya_sandy.pdf" class="btn bg-primary-hov" download>Download CV</a>
-            <a href="#contact" class="scroll btn bg-primary-hov" v-smooth-scroll>Contact Me</a>
+            <a href="/assets/doc/CV_aditya_sandy.pdf" class="btn bg-primer-hov" download>Download CV</a>
+            <a href="#contact" class="scroll btn bg-primer-hov" v-smooth-scroll>Contact Me</a>
           </div>
         </div>
       </div>
@@ -152,7 +152,7 @@
               <div class="card" data-aos="zoom-in">
                 <div class=" card-action">
                   <h5 class="bold">High School</h5>
-                  <h6>SMAN 5 Bekasi<br />2006-2009</h6>
+                  <h6><a href="https://sman5kotabekasi.sch.id/">SMAN 5 Bekasi</a><br />2006-2009</h6>
                   <p>
                     I completed my High School degree from this prestigious institution. I managed to finish all the
                     lessons with satisfying results.
@@ -171,7 +171,7 @@
               <div class="card" data-aos="zoom-in">
                 <div class="card-action">
                   <h5 class="bold">University</h5>
-                  <h6>STMIK Mercusuar Bekasi<br />2012-2017</h6>
+                  <h6><a href="https://mercusuar.ac.id/">STMIK Mercusuar Bekasi</a><br />2012-2017</h6>
                   <p>
                     I completed a computer science degree from this prestigious institution. I managed to complete all
                     courses and get cum laude grades
@@ -193,7 +193,7 @@
           </h4>
         </div>
         <div class="card" data-aos="zoom-in">
-          <div class="card-content bg-primary no-hover white-text">
+          <div class="card-content bg-primer no-hover white-text">
             <div class="row no-margin">
               <div class="col s12 l4">
                 <h5 class="center-align">Professional</h5>
@@ -270,7 +270,7 @@
                   <figure>
                     <img src="/assets/images/lock.jpg" alt="restaurant" style="width:100%">
                     <figcaption>
-                      <h5>Login <b>Admin</b></h5>
+                      <h5>Login <b>APP</b></h5>
                       <p>Showcase Your Portfolio in Details on a Single Page</p>
                     </figcaption>
                   </figure>
@@ -301,7 +301,7 @@
               <div class="card" data-aos="zoom-in">
                 <div class="card-action">
                   <h5 class="bold">Sales Associate</h5>
-                  <h6>PT Berca Retail Sportindo<br />2010-2015</h6>
+                  <h6><a href="http://www.league-world.com/">PT Berca Retail Sportindo</a><br />2010-2015</h6>
                   <p>
                     I started my career here. spent five years working in the shoe retail field..
                   </p>
@@ -323,14 +323,14 @@
               <div class="card" data-aos="zoom-in">
                 <div class="card-action">
                   <h5 class="bold">Customer Service Officer</h5>
-                  <h6>PT Bank Central Asia Tbk<br />2015-2018</h6>
+                  <h6><a href="https://www.bca.co.id/">PT Bank Central Asia Tbk</a><br />2015-2018</h6>
                   <p>
                     Worked in one of the largest banks in southeast asia for three years, giving me experience in the
                     field of bank services, administration and management..
                   </p>
                   <!-- Modal Trigger -->
                   <a class="teal-text waves-effect waves-light modal-trigger elip" href="#modal1">
-                    <i class='fas fa-ellipsis-h'></i>
+                    <!-- <i class='fas fa-ellipsis-h'></i> -->Read More...
                   </a>
                 </div>
               </div>
@@ -358,19 +358,19 @@
           </div>
 
           <div class="row no-margin center-align">
-            <div class="col s6 l2 bg-primary white-text" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="col s6 l2 bg-primer white-text" data-aos="zoom-in" data-aos-duration="1500">
               <i class='fas fa-headphones'></i><BR>Music
             </div>
             <div class="col s6 l2 txt-primary" data-aos="zoom-in" data-aos-duration="1000">
               <i class='fas fa-mountain'></i><BR>Hiking
             </div>
-            <div class="col s6 l2 bg-primary white-text" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="col s6 l2 bg-primer white-text" data-aos="zoom-in" data-aos-duration="1500">
               <i class='fas fa-walking'></i><BR>Travelling
             </div>
             <div class="col s6 l2 txt-primary" data-aos="zoom-in" data-aos-duration="1000">
               <i class='fas fa-film'></i><BR>Movies
             </div>
-            <div class="col s6 l2 bg-primary white-text" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="col s6 l2 bg-primer white-text" data-aos="zoom-in" data-aos-duration="1500">
               <i class='fas fa-dumbbell'></i><BR>Gym
             </div>
             <div class="col s6 l2 txt-primary" data-aos="zoom-in" data-aos-duration="1000">
@@ -394,13 +394,13 @@
           <div class="col s12 l6">
             <div class="card" data-aos="zoom-in">
               <div class="card-content">
-                <form action="#" method="get">
+                <form method="get">
                   <div class="input-field">
-                    <input id="name" v-model='name' type="text" class="validate">
+                    <input id="name" v-model='name' type="text" class="validate" required>
                     <label for="name">Name</label>
                   </div>
                   <div class="input-field">
-                    <input id="subject" v-model='subject' type="text" class="validate">
+                    <input id="subject" v-model='subject' type="text" class="validate" required>
                     <label for="subject">Subject</label>
                   </div>
                   <!-- <div class="input-field">
@@ -412,9 +412,8 @@
                       rows="4"></textarea>
                     <label for="textarea">Message</label>
                   </div>
-                  <p>{{name}}</p>
-                  <a :href='`mailto:aditya.sandy16@gmail.com?subject=${subject}&body=${content}`'
-                    class="btn bg-primary-hov no-margin">Touch Me</a>
+                  <a :href='`mailto:aditya.sandy16@gmail.com?subject=${subject}&body=Hi, my name ${name} %0d%0a${content}`'
+                    class="btn bg-primer-hov no-margin">Touch Me</a>
                 </form>
               </div>
             </div>
@@ -440,7 +439,8 @@
         {{ name }}<span class="right">{{ progress }}%</span>
       </div>
       <div class="progress">
-        <div class="determinate" :style="{width: progress+'%'}"></div>
+        <div class="determinate" :style="{width: progress + '%'}">
+        </div>
       </div>
     </li>
   </template>
@@ -453,7 +453,7 @@
       <p>A bunch of text</p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
   </div>
   <!-- </template> -->
@@ -468,7 +468,7 @@
   <script>
     AOS.init({
       duration: 700,
-      once: false
+      once: true
     });
   </script>
   <script>
