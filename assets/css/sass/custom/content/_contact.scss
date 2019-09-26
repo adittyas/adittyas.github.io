@@ -10,8 +10,12 @@
             }
         }
     }
+
+    textarea {
+        max-height: unit(200);
+    }
 }
 
 #map {
-    min-height: unit(339.917);
+    min-height: unit(394.917);
 }

@@ -22,54 +22,56 @@
 </head>
 
 <body class="grey lighten-4">
-  <div id='app'>
+  <main id='app'>
     <!-- start of header -->
     <header id="home">
-      <div class="parallax-container" id="parallax-header">
-        <div class="parallax">
-          <img src="https://source.unsplash.com/1600x900/?sea" />
+      <div class="container-full pos-relative">
+        <div class="parallax-container" id="parallax-header">
+          <div class="parallax">
+            <img src="https://source.unsplash.com/1600x900/?sea" />
+          </div>
         </div>
+        <ul id="slide-out" class="sidenav grey lighten-5">
+          <div class="logo-flat">
+            <!-- <img src="https://source.unsplash.com/300x150/?beach,mountain" alt="logo" /> -->
+            <div class="logo">A</div>
+          </div>
+          <li>
+            <a href="#home" v-smooth-scroll> <i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="#education" v-smooth-scroll> <i class="fas fa-university"></i>Education</a>
+          </li>
+          <li>
+            <a href="#skills" v-smooth-scroll> <i class="fas fa-sliders-h"></i>Skills</a>
+          </li>
+          <li>
+            <a href="#experience" v-smooth-scroll> <i class="fas fa-box-open"></i>Experience</a>
+          </li>
+          <li>
+            <a href="#portofolios" v-smooth-scroll> <i class="fas fa-briefcase"></i>Portofolios</a>
+          </li>
+          <li>
+            <a href="#interest" v-smooth-scroll> <i class="fas fa-heart"></i>interest</a>
+          </li>
+          <li>
+            <a href="#contact" v-smooth-scroll> <i class="fas fa-envelope"></i>Contact</a>
+          </li>
+        </ul>
+        <btn id="ham" data-target="slide-out" class="sidenav-trigger show-on-large">
+          <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </btn>
       </div>
-      <ul id="slide-out" class="sidenav grey lighten-5">
-        <div class="logo-flat">
-          <!-- <img src="https://source.unsplash.com/300x150/?beach,mountain" alt="logo" /> -->
-          <div class="logo">A</div>
-        </div>
-        <li>
-          <a href="#home" v-smooth-scroll> <i class="fas fa-home"></i>Home</a>
-        </li>
-        <li>
-          <a href="#education" v-smooth-scroll> <i class="fas fa-university"></i>Education</a>
-        </li>
-        <li>
-          <a href="#skills" v-smooth-scroll> <i class="fas fa-sliders-h"></i>Skills</a>
-        </li>
-        <li>
-          <a href="#experience" v-smooth-scroll> <i class="fas fa-box-open"></i>Experience</a>
-        </li>
-        <li>
-          <a href="#portofolios" v-smooth-scroll> <i class="fas fa-briefcase"></i>Portofolios</a>
-        </li>
-        <li>
-          <a href="#interest" v-smooth-scroll> <i class="fas fa-heart"></i>interest</a>
-        </li>
-        <li>
-          <a href="#contact" v-smooth-scroll> <i class="fas fa-envelope"></i>Contact</a>
-        </li>
-      </ul>
-      <btn id="ham" data-target="slide-out" class="sidenav-trigger show-on-large">
-        <div class="lds-ellipsis">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </btn>
     </header>
     <!-- end of header navigation -->
 
     <!-- v-cards  start-->
-    <div id='v-card' class="scroll section no-pad">
+    <div id='v-card' class="scroll section">
       <div class="container">
         <div class="card-panel hoverable pos-relative no-margin">
           <div class="white-text w-100 info">
@@ -116,7 +118,7 @@
     </div>
     <!-- v-cards  end-->
     <!-- start content about -->
-    <div id='about' class="scroll section no-pad" data-aos="zoom-in">
+    <div id='about' class="scroll section" data-aos="zoom-in">
       <div class="container">
         <div class="card">
           <div class="card-content">
@@ -136,7 +138,7 @@
     </div>
     <!-- end content about -->
     <!-- start timeline Education -->
-    <div id='education' class="scroll  section no-pad">
+    <div id='education' class="scroll  section">
       <div class="container">
         <div class="section-title txt-upper center-align">
           <h4>
@@ -185,7 +187,7 @@
     </div>
     <!-- end timeline Education -->
     <!-- start skills -->
-    <div id='skills' class="scroll section no-pad">
+    <div id='skills' class="scroll section">
       <div class="container">
         <div class="section-title txt-upper center-align">
           <h4>
@@ -194,7 +196,7 @@
         </div>
         <div class="card" data-aos="zoom-in">
           <div class="card-content bg-primer no-hover white-text">
-            <div class="row no-margin">
+            <div class="row">
               <div class="col s12 l4">
                 <h5 class="center-align">Professional</h5>
                 <ul class="skill-item">
@@ -225,14 +227,14 @@
     </div>
     <!-- start skills -->
     <!-- start portofolios -->
-    <div id='portofolios' class="scroll section no-pad">
+    <div id='portofolios' class="scroll section">
       <div class="container">
         <div class="section-title txt-upper center-align">
           <h4>
             <img src="/assets/images/safe.png" alt="layers" class="z-depth-2" data-aos="zoom-in" />Portofolios
           </h4>
         </div>
-        <div class="row no-margin">
+        <div class="row widened">
           <div class="col s12 l4" data-aos="zoom-in">
             <div class="card">
               <div class="card-content">
@@ -283,7 +285,7 @@
     </div>
     <!-- end portofolios -->
     <!-- start timeline experience -->
-    <div id='experience' class="scroll section no-pad">
+    <div id='experience' class="scroll section ">
       <div class="container">
         <div class="section-title txt-upper center-align">
           <h4>
@@ -341,7 +343,7 @@
     </div>
     <!-- end timeline experience -->
     <!-- start content interest -->
-    <div id='interest' class="scroll section no-pad">
+    <div id='interest' class="scroll section">
       <div class="container">
         <div class="section-title txt-upper center-align">
           <h4>
@@ -351,13 +353,15 @@
         <div class="card" data-aos="zoom-in">
           <div class="card-content">
             <p class="center-align">
-              I really like traveling and climbing mountains, because the silence of the mountains makes me calm. I love
-              jazz and classical music. Watching movies fill my free time. I like to hunt street food to experience the
+              I really like traveling and climbing mountains, because the silence of the mountains makes me calm. I
+              love
+              jazz and classical music. Watching movies fill my free time. I like to hunt street food to experience
+              the
               different tastes of food and four to five times exercising to the gym in one week.
             </p>
           </div>
 
-          <div class="row no-margin center-align">
+          <div class="row center-align">
             <div class="col s6 l2 bg-primer white-text" data-aos="zoom-in" data-aos-duration="1500">
               <i class='fas fa-headphones'></i><BR>Music
             </div>
@@ -383,14 +387,14 @@
     </div>
     <!-- end content interest -->
     <!-- start timeline experience -->
-    <div id='contact' class="scroll section no-pad">
+    <div id='contact' class="scroll section">
       <div class="container">
         <div class="section-title txt-upper center-align">
           <h4>
             <img src="/assets/images/envelope.png" alt="layers" class="z-depth-2" data-aos="zoom-in" />Contact
           </h4>
         </div>
-        <div class="row">
+        <div class="row widened">
           <div class="col s12 l6">
             <div class="card" data-aos="zoom-in">
               <div class="card-content">
@@ -409,8 +413,8 @@
                 </div> -->
                   <div class="input-field">
                     <textarea id="textarea" v-model='content' class="materialize-textarea" data-length="120"
-                      rows="4"></textarea>
-                    <label for="textarea">Message</label>
+                      style="height: 100px;"></textarea>
+                    <label for=" textarea">Message</label>
                   </div>
                   <a :href='`mailto:aditya.sandy16@gmail.com?subject=${subject}&body=Hi, my name ${name} %0d%0a${content}`'
                     class="btn bg-primer-hov no-margin">Touch Me</a>
@@ -430,7 +434,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
   <!-- end timeline experience -->
   <!-- templating for skills -->
   <template id="post-skill">

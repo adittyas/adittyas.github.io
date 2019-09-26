@@ -8266,11 +8266,30 @@ input[type=range]::-ms-thumb {
   font-weight: 900;
 }
 
+.widened {
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
 .timeline .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-small):not(.btn-large):not(.btn-large):not(.btn-floating) {
   color: #388e3c;
 }
 .timeline .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-small):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
   color: #68c46d;
+}
+
+.row {
+  margin-bottom: 0;
+}
+
+.section {
+  padding-top: 0.5rem;
+  padding-bottom: 0;
+}
+
+.container-full {
+  max-width: 89.0666666667rem;
+  margin: 0 auto;
 }
 
 html {
@@ -8504,7 +8523,7 @@ iframe {
 }
 
 #interest .row {
-  border-top: thin solid white;
+  border-top: thin solid #d8d8d8;
 }
 #interest .row .col {
   padding-top: 1.5rem;
@@ -8607,13 +8626,13 @@ iframe {
 }
 @media only screen and (min-width : 993px) {
   .timeline .timeline-block:nth-of-type(odd) .timeline-content .timeline-dot {
-    left: 100%;
+    left: 104%;
     transform: translateX(-50%);
   }
 }
 @media only screen and (min-width : 993px) {
   .timeline .timeline-block:nth-of-type(odd) {
-    padding-right: 50%;
+    padding-right: 52%;
   }
 }
 @media only screen and (min-width : 993px) {
@@ -8634,7 +8653,7 @@ iframe {
 }
 @media only screen and (min-width : 993px) {
   .timeline .timeline-block:nth-of-type(even) .timeline-content .timeline-dot {
-    right: 100%;
+    right: 104%;
     transform: translateX(50%);
   }
 }
@@ -8646,7 +8665,7 @@ iframe {
 }
 @media only screen and (min-width : 993px) {
   .timeline .timeline-block:nth-of-type(even) {
-    padding-left: 50%;
+    padding-left: 52%;
   }
 }
 .timeline .timeline-block .timeline-content {
@@ -8689,9 +8708,9 @@ iframe {
 }
 @media only screen and (min-width : 993px) {
   .timeline .timeline-block .timeline-content .timeline-dot {
-    padding-top: 0.2666666667rem;
-    width: 3rem;
-    height: 3rem;
+    padding-top: 0.5333333333rem;
+    width: 3.5333333333rem;
+    height: 3.5333333333rem;
   }
 }
 .timeline .timeline-block .timeline-content .timeline-dot::before {
@@ -8743,9 +8762,12 @@ iframe {
     margin: 0;
   }
 }
+#contact textarea {
+  max-height: 13.3333333333rem;
+}
 
 #map {
-  min-height: 22.6611333333rem;
+  min-height: 26.3278rem;
 }
 
 .lds-ellipsis {

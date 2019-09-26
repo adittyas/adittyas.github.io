@@ -165,3 +165,10 @@
 @mixin text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
 }
+
+.widened {
+    margin: {
+        right: unit(-11.25);
+        left: unit(-11.25);
+    }
+}
