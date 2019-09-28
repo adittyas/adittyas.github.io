@@ -14,14 +14,31 @@ document.addEventListener('DOMContentLoaded', function () {
         height: 610
     });
     M.Modal.init(modal);
-    // const listMenu = sideNav.querySelectorAll('<a>');
-
-    // var instance = M.Sidenav.getInstance(listMenu);
-    // instance.close();
-
-    // for (var i = 0; i < listMenu.length; i++) {
-    //     console.log(listMenu[i]); //second console output
-    //     // var instance = M.Sidenav.getInstance(listMenu[i]);
-    // }
-    // instance.close();
 });
+// const timelin = document.getElementsByClassName('timeline');
+// console.log(timelin);
+window.addEventListener('scroll', function () {
+    const timelin = document.querySelectorAll('.timeline');
+    let scrollPosY = window.pageYOffset | document.body.scrollTop;
+    // console.log('scrollpsy : ' + scrollPosY);
+    // console.log('elemnt : ' + hT);
+    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (w <= 992) {
+        timelin.forEach(e => {
+            this.console.log(e);
+            if (scrollPosY >= (e.offsetTop - 300)) {
+                e.classList.add('downline');
+            }
+        });
+    }
+})
+
+// $(window).scroll(function () {
+//     var hT = $('#scroll-to').offset().top,
+//         hH = $('#scroll-to').outerHeight(),
+//         wH = $(window).height(),
+//         wS = $(this).scrollTop();
+//     if (wS > (hT + hH - wH)) {
+//         console.log('H1 on the view!');
+//     }
+// });

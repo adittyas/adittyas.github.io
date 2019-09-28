@@ -1,21 +1,25 @@
 .timeline {
     position: relative;
 
-    &::before {
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 100%;
-        background-color: $primer-lighten;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-    }
+    &.downline {
 
-    @media #{$large-and-up} {
         &::before {
-            display: none;
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background-color: $primer-lighten;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            animation: heightdown 1s linear;
+        }
+
+        @media #{$large-and-up} {
+            &::before {
+                display: none;
+            }
         }
     }
 
@@ -247,4 +251,24 @@
 .elip {
     font-size: unit(22.5);
     margin-top: unit(-15);
+}
+
+@keyframes heightdown {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+@-webkit-keyframes heightdown {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
 }

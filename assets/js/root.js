@@ -1,8 +1,8 @@
 Vue.component('skills-template', {
     template: '#post-skill',
-    props: ['name', 'progress', 'id']
+    props: ['todo']
 })
-var app = new Vue({
+new Vue({
     el: '#app',
     data: {
         profesionals: [{
@@ -84,8 +84,6 @@ var app = new Vue({
         content: '',
         subject: ''
     },
-
-
 })
 
 // var contact = new Vue({

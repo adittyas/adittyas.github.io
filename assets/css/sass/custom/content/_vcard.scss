@@ -82,10 +82,10 @@ $pad-card: unit(45);
     // overflow: hidden;
 
     img {
-        max-width: unit(200);
+        max-width: unit(180);
         object-fit: cover;
         object-position: center;
-        border-radius: unit(15);
+        border-radius: 50%;
         @include box-shadow;
 
         @media #{$large-and-up} {
@@ -138,7 +138,7 @@ $pad-card: unit(45);
     }
 
     >a {
-        margin: 0 unit(3);
+        // margin: 0 unit(3);
 
         @media #{$large-and-up} {
             margin: 0 unit(7.5);

@@ -37,33 +37,34 @@
             <div class="logo">A</div>
           </div>
           <li>
-            <a href="#home" v-smooth-scroll> <i class="fas fa-home"></i>Home</a>
+            <a href="#home" > <i class="fas fa-home"></i>Home</a>
           </li>
           <li>
-            <a href="#education" v-smooth-scroll> <i class="fas fa-university"></i>Education</a>
+            <a href="#education" > <i class="fas fa-university"></i>Education</a>
           </li>
           <li>
-            <a href="#skills" v-smooth-scroll> <i class="fas fa-sliders-h"></i>Skills</a>
+            <a href="#skills" > <i class="fas fa-sliders-h"></i>Skills</a>
           </li>
           <li>
-            <a href="#experience" v-smooth-scroll> <i class="fas fa-box-open"></i>Experience</a>
+            <a href="#experience" > <i class="fas fa-box-open"></i>Experience</a>
           </li>
           <li>
-            <a href="#portofolios" v-smooth-scroll> <i class="fas fa-briefcase"></i>Portofolios</a>
+            <a href="#portofolios" > <i class="fas fa-briefcase"></i>Portofolios</a>
           </li>
           <li>
-            <a href="#interest" v-smooth-scroll> <i class="fas fa-heart"></i>interest</a>
+            <a href="#interest" > <i class="fas fa-heart"></i>interest</a>
           </li>
           <li>
-            <a href="#contact" v-smooth-scroll> <i class="fas fa-envelope"></i>Contact</a>
+            <a href="#contact" > <i class="fas fa-envelope"></i>Contact</a>
           </li>
         </ul>
-        <btn id="ham" data-target="slide-out" class="sidenav-trigger show-on-large">
+        <a id="ham" data-target="slide-out" class="sidenav-trigger show-on-large">
           <div class="lds-facebook">
             <div></div>
             <div></div>
             <div></div>
           </div>
+        </a>
       </div>
     </header>
     <!-- end of header navigation -->
@@ -129,7 +130,7 @@
           </div>
           <div class="card-action center-align">
             <a href="/assets/doc/CV_aditya_sandy.pdf" class="btn bg-primer-hov" download>Download CV</a>
-            <a href="#contact" class="scroll btn bg-primer-hov" v-smooth-scroll>Contact Me</a>
+            <a href="#contact" class="scroll btn bg-primer-hov" >Contact Me</a>
           </div>
         </div>
       </div>
@@ -198,22 +199,21 @@
               <div class="col s12 m6 l4">
                 <h5 class="center-align">Professional</h5>
                 <ul class="skill-item">
-                  <skills-template v-for="item in profesionals" :progress="item.percent" :name="item.text"
-                    :key="item.id">
+                  <skills-template v-for="item in profesionals" :todo='item' :key='item.id'>
                   </skills-template>
                 </ul>
               </div>
               <div class="col s12 m6 l4">
                 <h5 class="center-align">Software</h5>
                 <ul class="skills-item">
-                  <skills-template v-for="item in software" :progress="item.percent" :name="item.text" :key="item.id">
+                  <skills-template v-for="item in profesionals" :todo='item' :key='item.id'>
                   </skills-template>
                 </ul>
               </div>
               <div class="col s12 m12 l4">
                 <h5 class="center-align">Personal</h5>
                 <ul class="skills-item">
-                  <skills-template v-for="item in personal" :progress="item.percent" :name="item.text" :key="item.id">
+                  <skills-template v-for="item in profesionals" :todo='item' :key='item.id'>
                   </skills-template>
                 </ul>
               </div>
@@ -414,8 +414,8 @@
                       style="height: 100px;"></textarea>
                     <label for=" textarea">Message</label>
                   </div>
-                  <a :href='`mailto:aditya.sandy16@gmail.com?subject=${subject}&body=Hi, my name ${name} %0d%0a${content}`'
-                    class="btn bg-primer-hov no-margin">Touch Me</a>
+                  <!-- <a :href='`mailto:aditya.sandy16@gmail.com?subject=${subject}&body=Hi, my name ${name} %0d%0a${content}`'
+                    class="btn bg-primer-hov no-margin">Touch Me</a> -->
                 </form>
               </div>
             </div>
@@ -438,10 +438,10 @@
   <template id="post-skill">
     <li>
       <div class="clearfix">
-        {{ name }}<span class="right">{{ progress }}%</span>
+        {{ todo.text }}<span class="right">{{ todo.percent }}%</span>
       </div>
       <div class="progress">
-        <div class="determinate" :style="{width: progress + '%'}">
+        <div class="determinate" :style="{width: todo.percent + '%'}">
         </div>
       </div>
     </li>
@@ -462,11 +462,11 @@
 
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="/vendors/materialize/js/materialize.min.js"></script>
-  <script type="text/javascript" src="assets/js/init.js"></script>
   <script type="text/javascript" src="assets/js/vue.js"></script>
-  <script type="text/javascript" src="assets/js/smooth-scroll.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/smooth-scroll.js"></script> -->
   <script type="text/javascript" src="assets/js/root.js"></script>
   <script type="text/javascript" src="/vendors/aos/dist/aos.js"></script>
+  <script type="text/javascript" src="assets/js/init.js"></script>
   <script>
     AOS.init({
       duration: 700,
