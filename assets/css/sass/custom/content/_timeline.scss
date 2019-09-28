@@ -13,7 +13,7 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 1;
-            animation: heightdown 1s linear;
+            animation: heightdown 1s ease-in;
         }
 
         @media #{$large-and-up} {
@@ -60,7 +60,6 @@
 
     .timeline-block {
         position: relative;
-
 
         &:nth-of-type(n + 2) {
             @media #{$large-and-up} {
@@ -167,12 +166,12 @@
         }
 
         .timeline-content {
-            overflow: hidden;
+            // overflow: hidden;
             position: relative;
             width: 100%;
             z-index: 1;
             margin: unit(7.5) 0 unit(15) 0;
-            @include box-shadow;
+            // @include box-shadow;
             border-radius: unit(2);
 
             @media #{$large-and-up} {
@@ -181,9 +180,23 @@
                 box-shadow: none;
             }
 
+            .dot-wrap {
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: unit(48);
+                height: unit(48);
+                z-index: 5;
+
+                @media #{$large-and-up} {
+                    position: static;
+                    width: auto;
+                    height: auto;
+                }
+            }
+
             .timeline-dot {
-                // display: none;
-                // @media #{$large-and-up} {
                 display: block;
 
                 h4 {
@@ -266,9 +279,11 @@
 @-webkit-keyframes heightdown {
     from {
         height: 0;
+        opacity: 0;
     }
 
     to {
         height: 100%;
+        opacity: 1;
     }
 }

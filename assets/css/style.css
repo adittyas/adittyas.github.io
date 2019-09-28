@@ -8264,6 +8264,11 @@ input[type=range]::-ms-thumb {
   margin-left: -0.75rem;
 }
 
+.clr-btn {
+  padding: 0 !important;
+  border: none;
+}
+
 .timeline .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-small):not(.btn-large):not(.btn-large):not(.btn-floating) {
   color: #388e3c;
 }
@@ -8538,7 +8543,7 @@ iframe {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  animation: heightdown 1s linear;
+  animation: heightdown 1s ease-in;
 }
 @media only screen and (min-width : 993px) {
   .timeline.downline::before {
@@ -8662,12 +8667,10 @@ iframe {
   }
 }
 .timeline .timeline-block .timeline-content {
-  overflow: hidden;
   position: relative;
   width: 100%;
   z-index: 1;
   margin: 0.5rem 0 1rem 0;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
   border-radius: 0.1333333333rem;
 }
 @media only screen and (min-width : 993px) {
@@ -8675,6 +8678,22 @@ iframe {
     overflow: visible;
     margin: 0;
     box-shadow: none;
+  }
+}
+.timeline .timeline-block .timeline-content .dot-wrap {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3.2rem;
+  height: 3.2rem;
+  z-index: 5;
+}
+@media only screen and (min-width : 993px) {
+  .timeline .timeline-block .timeline-content .dot-wrap {
+    position: static;
+    width: auto;
+    height: auto;
   }
 }
 .timeline .timeline-block .timeline-content .timeline-dot {
@@ -8746,9 +8765,11 @@ iframe {
 @-webkit-keyframes heightdown {
   from {
     height: 0;
+    opacity: 0;
   }
   to {
     height: 100%;
+    opacity: 1;
   }
 }
 #skills .card h5 {
