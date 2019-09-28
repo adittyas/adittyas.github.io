@@ -59,7 +59,7 @@
           </li>
         </ul>
         <a id="ham" data-target="slide-out" class="sidenav-trigger show-on-large">
-          <div class="lds-facebook">
+          <div class="lds-menu">
             <div></div>
             <div></div>
             <div></div>
@@ -97,8 +97,8 @@
               </li>
             </ul>
             <div class="links">
-              <a class="btn-floating pulse indigo"><i class="fab fa-facebook-f"></i></a>
-              <a class="btn-floating pulse blue darken-4"><i class="fab fa-linkedin-in"></i></a>
+              <a class="btn-floating pulse blue darken-4" href='www.linkedin.com/in/adittyas'><i
+                  class="fab fa-linkedin-in"></i></a>
               <a class="btn-floating pulse amber accent-4" href="https://www.instagram.com/dtysnd/"><i
                   class="fab fa-instagram"></i></a>
               <a href="tel:+6281294924241" class="btn-floating pulse lime lighten-1"><i
@@ -404,23 +404,24 @@
           <div class="col s12 l6">
             <div class="card" data-aos="zoom-in">
               <div class="card-content">
-                <form method="get">
+                <form method="get" action="#">
                   <div class="input-field">
-                    <input id="name" v-model='name' type="text" class="validate" required>
+                    <input id="name" v-model='contact.name' type="text" class="validate" required
+                      pattern="[a-zA-Z\s]{1,35}" maxlength="35">
                     <label for="name">Name</label>
                   </div>
                   <div class="input-field">
-                    <input id="subject" v-model='subject' type="text" class="validate" required>
+                    <input id="subject" v-model='contact.subject' type="text" class="validate" required
+                      pattern="[a-zA-Z\s]{1,100}">
                     <label for="subject">Subject</label>
                   </div>
                   <div class="input-field">
-                    <textarea id="textarea" v-model='content' class="materialize-textarea" data-length="120"
+                    <textarea id="textarea" v-model='contact.content' class="materialize-textarea" data-length="120"
                       style="height: 100px;"></textarea>
                     <label for=" textarea">Message</label>
                   </div>
-                  <button class='clr-btn' type='submit'>
-                    <a :href='`mailto:aditya.sandy16@gmail.com?subject=${subject}&body=Hi, my name ${name} %0d%0a${content}`'
-                      class="btn bg-primer-hov no-margin">Touch Me</a>
+                  <button @click='sendMail' class='btn bg-primer-hov no-margin' type='submit'>
+                    Send
                   </button>
                 </form>
               </div>
